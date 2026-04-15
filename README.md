@@ -1,73 +1,112 @@
-# React + TypeScript + Vite
+# 🌤️ Weather App — React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web del clima desarrollada con **React**, **TypeScript** y **Vite**, que permite consultar condiciones meteorológicas en tiempo real mediante búsqueda por ciudad o geolocalización del navegador.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Demo
 
-## React Compiler
+🔗 Próximamente (deploy en Vercel)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🧠 Descripción
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Proyecto enfocado en el desarrollo de una aplicación frontend moderna utilizando una arquitectura basada en componentes.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+La aplicación consume una API externa para obtener datos meteorológicos y los renderiza dinámicamente en la interfaz, aplicando buenas prácticas como tipado estricto, separación de responsabilidades y manejo de estado.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## ⚙️ Stack tecnológico
+
+* ⚛️ React
+* 🟦 TypeScript
+* ⚡ Vite
+* 🌐 Fetch API
+* 📍 Geolocation API
+* 🎨 SVG dinámicos
+
+---
+
+## ✨ Funcionalidades
+
+* 🔍 Búsqueda de clima por ciudad
+* 📍 Detección automática de ubicación del usuario
+* 🌡️ Visualización de temperatura y condiciones climáticas
+* 💧 Información adicional (humedad, sensación térmica)
+* 🎨 Iconos SVG dinámicos según el clima
+* ⚡ Renderizado reactivo
+* 🔐 Uso de variables de entorno para la API Key
+
+---
+
+## 🧩 Arquitectura del proyecto
+
+```bash id="5l3s0z"
+src/
+│
+├── components/
+│   ├── SearchBar.tsx
+│   └── WeatherCard.tsx
+│
+├── services/
+│   └── weatherApi.ts
+│
+├── types/
+│   └── Weather.ts
+│
+├── utils/
+│   └── getWeatherIcon.tsx
+│
+└── App.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🧠 Conceptos aplicados
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* Componentización en React
+* Manejo de estado con `useState`
+* Ciclo de vida con `useEffect`
+* Consumo de APIs con `async/await`
+* Tipado estricto con TypeScript
+* Separación de lógica (services, utils)
+* Manejo de errores
+
+---
+
+## 🔑 Variables de entorno
+
+Crear un archivo `.env` en la raíz:
+
+```env id="2bnk13"
+VITE_API_KEY=tu_api_key
 ```
+
+---
+
+## ▶️ Instalación y ejecución
+
+```bash id="3qhmz6"
+git clone https://github.com/tu-usuario/weather-app-react-ts.git
+cd weather-app-react-ts
+npm install
+npm run dev
+```
+
+---
+
+## 📈 Posibles mejoras
+
+* 🌙 Modo oscuro / claro
+* 🎞️ Animaciones en SVG
+* 📊 Datos adicionales del clima
+* 💾 Persistencia de búsqueda
+* 📱 Diseño responsive mejorado
+
+---
+
+## 👨‍💻 Autor
+
+Proyecto desarrollado como parte de mi formación en desarrollo frontend moderno, enfocado en aplicaciones escalables con React y TypeScript.
