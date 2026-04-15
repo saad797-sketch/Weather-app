@@ -6,7 +6,7 @@ Aplicación web del clima desarrollada con **React**, **TypeScript** y **Vite**,
 
 ## 🚀 Demo
 
-🔗 Próximamente (deploy en Vercel)
+🔗 weather-app-seven-plum-54.vercel.app
 
 ---
 
